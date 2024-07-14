@@ -1,0 +1,10 @@
+READ:
+LAMBDA functions
+shared pointers
+operators
+virtual functions
+
+PRACTICE:
+LAMBDA functions
+private locking variables in classes
+pointers and references
