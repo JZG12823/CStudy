@@ -8,3 +8,4 @@ PRACTICE:
 LAMBDA functions
 private locking variables in classes
 pointers and references
+https://cplusplus.com/doc/tutorial/operators/
