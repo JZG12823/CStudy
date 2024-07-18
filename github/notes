@@ -4,3 +4,5 @@ stars have points AND theres references
 referances are aliases
 pointers are there own object
 ; at the end of a class
+vector<t> uses .size()
+array[] uses sizeof()
