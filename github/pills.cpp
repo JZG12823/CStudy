@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 class pill
 {
 private:
@@ -37,6 +38,14 @@ public:
 	std::cout << "day: " << day << "\n";
 	std::cout << "night: " << night << "\n";
   }
+  void pillwrite(std::string Fname){
+      std::ofstream Myfile(Fname, std::ios::app);
+      Myfile << name << "\n";
+      Myfile << doseage << "\n";
+      Myfile << day << "\n";
+      Myfile << night << "\n";
+      Myfile.close();
+  }
 
 };
 
@@ -53,7 +62,8 @@ std::string contrecures (std::string question)
 }
 void intake(std::string& nm, double& dg, bool& dy, bool& nt){
     std::cout << "name: " << "\n";
-    std::cin >> nm;
+    std::cin.ignore();
+    std::getline(std::cin, nm);
     std::cout << "doseage: " << "\n";
     std::cin >> dg;
     std::string nput2 = contrecures("day (y/n):");
@@ -71,6 +81,17 @@ void intake(std::string& nm, double& dg, bool& dy, bool& nt){
         dy = false;
     }
     
+}
+void pillret(std::vector<pill> que){
+    std::cout << "your pills are : " << "\n";
+	for(int i = 0; i < que.size(); i++){
+	    que[i].readPill();
+	}
+}
+  void pillwri(std::vector<pill> que, std::string Fname){
+    for(int i = 0; i < que.size(); i++){
+        que[i].pillwrite(Fname);
+    }
 }
 
 int
@@ -104,10 +125,9 @@ main ()
 		}
 
 	  }
-	std::cout << "your pills are : " << "\n";
-	for(int i = 0; i < pills.size(); i++){
-	    pills[i].readPill();
-	}
+	  pillret(pills);
+	  pillwri(pills, "file.txt");
+
   }catch(...){}
 
   return 0;
