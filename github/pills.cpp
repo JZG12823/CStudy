@@ -17,20 +17,16 @@ public:
 	day = day_in;
 	night = night_in;
   }
-  void adjustName (std::string name_in)
-  {
+  void adjustName (std::string name_in){
 	name = name_in;
   }
-  void adjustDoseage (double doseage_in)
-  {
+  void adjustDoseage (double doseage_in){
 	doseage = doseage_in;
   }
-  void adjustDay (bool day_in)
-  {
+  void adjustDay (bool day_in){
 	day = day_in;
   }
-  void adjustNight (bool night_in)
-  {
+  void adjustNight (bool night_in){
 	night = night_in;
   }
   void readPill ()
