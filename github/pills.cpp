@@ -1,4 +1,5 @@
 //pills
+//this file contains the bare bones for making evol sims!
 #include <iostream>
 #include <string>
 #include <vector>
