@@ -9,6 +9,7 @@ https://cppinstitute.org/cpa
 https://cplusplus.com/reference/vector/vector/
 
 PRACTICE:
+ternary operators & nested ternary operators
 LAMBDA functions
 private locking variables in classes
 pointers and references
